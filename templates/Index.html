@@ -1,0 +1,348 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>StockDashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
+    <link rel="stylesheet" href="../templates/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../templates/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../templates/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="../templates/assets/css/metisMenu.css">
+    <link rel="stylesheet" href="../templates/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../templates/assets/css/slicknav.min.css">
+    <!-- amchart css -->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <!-- others css -->
+    <link rel="stylesheet" href="../templates/assets/css/typography.css">
+    <link rel="stylesheet" href="../templates/assets/css/default-css.css">
+    <link rel="stylesheet" href="../templates/assets/css/styles.css">
+    <link rel="stylesheet" href="../templates/assets/css/responsive.css">
+    <!-- modernizr css -->
+    <script src="../templates/assets/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- preloader area start -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- preloader area end -->
+    <!-- page container area start -->
+    <div class="page-container">
+        <!-- main content area start -->
+        <div class="main-content">
+            <!-- header area start -->
+            <div class="header-area">
+                <div class="row align-items-center">
+                    <!-- nav and search button -->
+                    <div class="col-md-6 col-sm-8 clearfix">
+                        <div class="search-box pull-left">
+                            <form action="#">
+                                <input type="text" name="search" placeholder="Enter Stock" required>
+                                <i class="ti-search"></i>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- profile info & task notification -->
+                    <div class="col-md-6 col-sm-4 clearfix">
+                        <ul class="notification-area pull-right">
+                            <li id="full-view"><i class="ti-fullscreen"></i></li>
+                            <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
+                            <li class="dropdown">
+                                <i class="ti-bell dropdown-toggle" data-toggle="dropdown">
+                                    <span>2</span>
+                                </i>
+                                <div class="dropdown-menu bell-notify-box notify-box">
+                                    <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>
+                                    <div class="nofity-list">
+                                        <a href="#" class="notify-item">
+                                            <div class="notify-thumb"><i class="ti-key btn-danger"></i></div>
+                                            <div class="notify-text">
+                                                <p>You have Changed Your Password</p>
+                                                <span>Just Now</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="notify-item">
+                                            <div class="notify-thumb"><i class="ti-comments-smiley btn-info"></i></div>
+                                            <div class="notify-text">
+                                                <p>New Commetns On Post</p>
+                                                <span>30 Seconds ago</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="notify-item">
+                                            <div class="notify-thumb"><i class="ti-key btn-primary"></i></div>
+                                            <div class="notify-text">
+                                                <p>Some special like you</p>
+                                                <span>Just Now</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <i class="fa fa-envelope-o dropdown-toggle" data-toggle="dropdown"><span>3</span></i>
+                                <div class="dropdown-menu notify-box nt-enveloper-box">
+                                    <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>
+                                    <div class="nofity-list">
+                                        <a href="#" class="notify-item">
+                                            <div class="notify-thumb">
+                                                <img src="../templates/assets/images/author/author-img1.jpg" alt="image">
+                                            </div>
+                                            <div class="notify-text">
+                                                <p>Aglae Mayer</p>
+                                                <span class="msg">Hey I am waiting for you...</span>
+                                                <span>3:15 PM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="settings-btn">
+                                <i class="ti-settings"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- header area end -->
+            <!-- page title area start -->
+            <div class="page-title-area">
+                <div class="row align-items-center">
+                    <div class="col-sm-6">
+                        <div class="breadcrumbs-area clearfix">
+                            <h4 class="page-title pull-left">Dashboard</h4>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 clearfix">
+                        <div class="user-profile pull-right">
+                            <img class="avatar user-thumb" src="../templates/assets/images/author/avatar.png" alt="avatar">
+                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Sindhuja Ramini <i class="fa fa-angle-down"></i></h4>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Message</a>
+                                <a class="dropdown-item" href="#">Settings</a>
+                                <a class="dropdown-item" href="#">Log Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- page title area end -->
+            <div class="main-content-inner">
+                <!-- MAIN CONTENT GOES HERE -->
+                <div class="row mt-5 mb-5">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-sm-flex justify-content-between align-items-center">
+                                    <h4 class="header-title mb-0">Market Value And Trends</h4>
+                                    <select class="custome-select border-0 pr-3">
+                                        <option selected="">Last 24 Hours</option>
+                                        <option value="0">01 July 2018</option>
+                                    </select>
+                                </div>
+                                <div class="market-status-table mt-4">
+                                    <div class="table-responsive">
+                                        <table class="dbkit-table">
+                                            <tbody><tr class="heading-td">
+                                                <td class="mv-icon">Logo</td>
+                                                <td class="stock-name">Stock Name</td>
+                                                <td class="buy">Buy</td>
+                                                <td class="sell">Sells</td>
+                                                <td class="trends">Trends</td>
+                                                <td class="attachments">Attachments</td>
+                                                <td class="stats-chart">Stats</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="mv-icon"><img src="../templates/assets/images/icon/market-value/icon1.png" alt="icon">
+                                                </td>
+                                                <td class="stock-name">Stock Name</td>
+                                                <td class="buy">30% <img src="../templates/assets/images/icon/market-value/triangle-down.png" alt="icon"></td>
+                                                <td class="sell">20% <img src="../templates/assets/images/icon/market-value/triangle-up.png" alt="icon"></td>
+                                                <td class="trends"><img src="../templates/assets/images/icon/market-value/trends-up-icon.png" alt="icon"></td>
+                                                <td class="attachments">$ 56746,857</td>
+                                                <td class="stats-chart"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                                                    <canvas id="mvaluechart" width="150" height="74" class="chartjs-render-monitor" style="display: block; height: 37px; width: 75px;"></canvas>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">Recent Tweets for Stock</h4>
+                                <div class="single-table">
+                                    <div class="table-responsive">
+                                        <table class="table text-center">
+                                            <thead class="text-uppercase">
+                                                <tr>
+                                                    <th scope="col">Date</th>
+                                                    <th scope="col">Tweet</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">09 / 07 / 2018</th>
+                                                    <td>Tweet 4</td></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">09 / 07 / 2018</th>
+                                                    <td>Tweet 4</td></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">09 / 07 / 2018</th>
+                                                    <td>Tweet 4</td></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">09 / 07 / 2018</th>
+                                                    <td>Tweet 4</td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mt-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <div id="ambarchart2" style="overflow: hidden; text-align: left;"><div class="amcharts-main-div" style="position: relative;"><div class="amcharts-chart-div" style="overflow: hidden; position: relative; text-align: left; width: 577px; height: 400px; padding: 0px; touch-action: auto;"><svg version="1.1" style="position: absolute; width: 577px; height: 400px; top: -0.40625px; left: 0.09375px;"><desc>JavaScript chart by amCharts 3.21.15</desc><g><path cs="100,100" d="M0.5,0.5 L576.5,0.5 L576.5,399.5 L0.5,399.5 Z" fill="#FFFFFF" stroke="#000000" fill-opacity="0" stroke-width="1" stroke-opacity="0" class="amcharts-bg"></path><path cs="100,100" d="M0.5,0.5 L538.5,0.5 L538.5,363.5 L0.5,363.5 L0.5,0.5 Z" fill="#FFFFFF" stroke="#000000" fill-opacity="0" stroke-width="1" stroke-opacity="0" class="amcharts-plot-area" transform="translate(30,10)"></path></g><g><g class="amcharts-category-axis" transform="translate(30,10)"><g><path cs="100,100" d="M0.5,363.5 L0.5,363.5 L0.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M90.5,363.5 L90.5,363.5 L90.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M179.5,363.5 L179.5,363.5 L179.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M269.5,363.5 L269.5,363.5 L269.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M359.5,363.5 L359.5,363.5 L359.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M448.5,363.5 L448.5,363.5 L448.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M538.5,363.5 L538.5,363.5 L538.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000" class="amcharts-axis-grid"></path></g></g><g class="amcharts-value-axis value-axis-valueAxisAuto0_1573096172371" transform="translate(30,10)" visibility="visible"><g><path cs="100,100" d="M0.5,363.5 L0.5,363.5 L538.5,363.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M0.5,318.5 L0.5,318.5 L538.5,318.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M0.5,272.5 L0.5,272.5 L538.5,272.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M0.5,227.5 L0.5,227.5 L538.5,227.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M0.5,182.5 L0.5,182.5 L538.5,182.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M0.5,136.5 L0.5,136.5 L538.5,136.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M0.5,91.5 L0.5,91.5 L538.5,91.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M0.5,45.5 L0.5,45.5 L538.5,45.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M0.5,0.5 L0.5,0.5 L538.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000" class="amcharts-axis-grid"></path></g></g></g><g></g><g></g><g></g><g></g><g><g transform="translate(30,10)" class="amcharts-graph-column amcharts-graph-graphAuto0_1573096172371"><g><g class="amcharts-graph-column amcharts-graph-graphAuto0_1573096172371" transform="translate(9,363)" visibility="visible" aria-label="Income 2013 23.5"><path cs="100,100" d="M0.5,0.5 L0.5,-78.5 L72.5,-78.5 L72.5,0.5 L0.5,0.5 Z" fill="#7474f0" stroke="#67b7dc" fill-opacity="1" stroke-width="1" stroke-opacity="0.9" class="amcharts-graph-column-front amcharts-graph-column-element"></path></g><g class="amcharts-graph-column amcharts-graph-graphAuto0_1573096172371" transform="translate(99,363)" visibility="visible" aria-label="Income 2014 26.2"><path cs="100,100" d="M0.5,0.5 L0.5,-140.5 L72.5,-140.5 L72.5,0.5 L0.5,0.5 Z" fill="#7474f0" stroke="#67b7dc" fill-opacity="1" stroke-width="1" stroke-opacity="0.9" class="amcharts-graph-column-front amcharts-graph-column-element"></path></g><g class="amcharts-graph-column amcharts-graph-graphAuto0_1573096172371" transform="translate(188,363)" visibility="visible" aria-label="Income 2015 30.1"><path cs="100,100" d="M0.5,0.5 L0.5,-228.5 L72.5,-228.5 L72.5,0.5 L0.5,0.5 Z" fill="#7474f0" stroke="#67b7dc" fill-opacity="1" stroke-width="1" stroke-opacity="0.9" class="amcharts-graph-column-front amcharts-graph-column-element"></path></g><g class="amcharts-graph-column amcharts-graph-graphAuto0_1573096172371" transform="translate(278,363)" visibility="visible" aria-label="Income 2016 29.5"><path cs="100,100" d="M0.5,0.5 L0.5,-215.5 L72.5,-215.5 L72.5,0.5 L0.5,0.5 Z" fill="#7474f0" stroke="#67b7dc" fill-opacity="1" stroke-width="1" stroke-opacity="0.9" class="amcharts-graph-column-front amcharts-graph-column-element"></path></g><g class="amcharts-graph-column amcharts-graph-graphAuto0_1573096172371" transform="translate(368,363)" visibility="visible" aria-label="Income 2017 30.6"><path cs="100,100" d="M0.5,0.5 L0.5,-239.5 L72.5,-239.5 L72.5,0.5 L0.5,0.5 Z" fill="#7474f0" stroke="#67b7dc" fill-opacity="1" stroke-width="1" stroke-opacity="0.9" class="amcharts-graph-column-front amcharts-graph-column-element"></path></g><g class="amcharts-graph-column amcharts-graph-graphAuto0_1573096172371" transform="translate(457,363)" visibility="visible" aria-label="Income 2018 34.1"><path cs="100,100" d="M0.5,0.5 L0.5,-319.5 L72.5,-319.5 L72.5,0.5 L0.5,0.5 Z" fill="#67b7dc" stroke="#67b7dc" fill-opacity="0.2" stroke-width="1" stroke-opacity="0.9" stroke-dasharray="5" class="amcharts-graph-column-front amcharts-graph-column-element"></path></g></g></g><g transform="translate(30,10)" class="amcharts-graph-line amcharts-graph-graph2" opacity="1" visibility="visible"><g></g><g clip-path="url(#AmChartsEl-1)"><path cs="100,100" d="M45.5,338.54375 L135.5,125.28125 L224.5,25.45625 L314.5,111.66875 L404.5,177.4625" fill="none" stroke-width="3" stroke-opacity="1" stroke="#AA59FE" stroke-linejoin="round" class="amcharts-graph-stroke"></path></g><clipPath id="AmChartsEl-1"><rect x="0" y="0" width="538" height="363" rx="0" ry="0" stroke-width="0"></rect></clipPath><g></g><g clip-path="url(#AmChartsEl-2)"><path cs="100,100" d="M404.5,177.4625 L493.5,70.83125" fill="none" stroke-width="3" stroke-dasharray="5" stroke-opacity="1" stroke="#AA59FE" stroke-linejoin="round" class="amcharts-graph-stroke"></path></g><clipPath id="AmChartsEl-2"><rect x="0" y="0" width="538" height="363" rx="0" ry="0" stroke-width="0"></rect></clipPath><g></g></g></g><g></g><g><g class="amcharts-category-axis"><path cs="100,100" d="M0.5,0.5 L538.5,0.5" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000" transform="translate(30,373)" class="amcharts-axis-line"></path></g><g class="amcharts-value-axis value-axis-valueAxisAuto0_1573096172371"><path cs="100,100" d="M0.5,0.5 L0.5,363.5" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000" transform="translate(30,10)" class="amcharts-axis-line" visibility="visible"></path></g></g><g></g><g></g><g><g transform="translate(30,10)" class="amcharts-graph-column amcharts-graph-graphAuto0_1573096172371"></g><g transform="translate(30,10)" class="amcharts-graph-line amcharts-graph-graph2" opacity="1" visibility="visible"><circle r="3.5" cx="0" cy="0" fill="#FFFFFF" stroke="#AA59FE" fill-opacity="1" stroke-width="3" stroke-opacity="1" transform="translate(45,338)" aria-label="Expenses 2013 21.1" class="amcharts-graph-bullet"></circle><circle r="3.5" cx="0" cy="0" fill="#FFFFFF" stroke="#AA59FE" fill-opacity="1" stroke-width="3" stroke-opacity="1" transform="translate(135,125)" aria-label="Expenses 2014 30.5" class="amcharts-graph-bullet"></circle><circle r="3.5" cx="0" cy="0" fill="#FFFFFF" stroke="#AA59FE" fill-opacity="1" stroke-width="3" stroke-opacity="1" transform="translate(224,25)" aria-label="Expenses 2015 34.9" class="amcharts-graph-bullet"></circle><circle r="3.5" cx="0" cy="0" fill="#FFFFFF" stroke="#AA59FE" fill-opacity="1" stroke-width="3" stroke-opacity="1" transform="translate(314,111)" aria-label="Expenses 2016 31.1" class="amcharts-graph-bullet"></circle><circle r="3.5" cx="0" cy="0" fill="#FFFFFF" stroke="#AA59FE" fill-opacity="1" stroke-width="3" stroke-opacity="1" transform="translate(404,177)" aria-label="Expenses 2017 28.2" class="amcharts-graph-bullet"></circle><circle r="3.5" cx="0" cy="0" fill="#FFFFFF" stroke="#AA59FE" fill-opacity="1" stroke-width="3" stroke-opacity="1" transform="translate(493,70)" aria-label="Expenses 2018 32.9" class="amcharts-graph-bullet"></circle></g></g><g><g></g></g><g><g class="amcharts-category-axis" transform="translate(30,10)" visibility="visible"><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(44.833333333333336,375.5)" class="amcharts-axis-label"><tspan y="6" x="0">2013</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(134.83333333333334,375.5)" class="amcharts-axis-label"><tspan y="6" x="0">2014</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(223.83333333333334,375.5)" class="amcharts-axis-label"><tspan y="6" x="0">2015</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(313.8333333333333,375.5)" class="amcharts-axis-label"><tspan y="6" x="0">2016</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(403.8333333333333,375.5)" class="amcharts-axis-label"><tspan y="6" x="0">2017</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(492.8333333333333,375.5)" class="amcharts-axis-label"><tspan y="6" x="0">2018</tspan></text></g><g class="amcharts-value-axis value-axis-valueAxisAuto0_1573096172371" transform="translate(30,10)" visibility="visible"><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,361.75)" class="amcharts-axis-label"><tspan y="6" x="0">20</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,316.75)" class="amcharts-axis-label"><tspan y="6" x="0">22</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,270.75)" class="amcharts-axis-label"><tspan y="6" x="0">24</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,225.75)" class="amcharts-axis-label"><tspan y="6" x="0">26</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,180.75)" class="amcharts-axis-label"><tspan y="6" x="0">28</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,134.75)" class="amcharts-axis-label"><tspan y="6" x="0">30</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,89.75)" class="amcharts-axis-label"><tspan y="6" x="0">32</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,43.75)" class="amcharts-axis-label"><tspan y="6" x="0">34</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,-1.25)" class="amcharts-axis-label"><tspan y="6" x="0">36</tspan></text></g></g><g></g><g transform="translate(30,10)"></g><g></g><g></g></svg><a href="http://www.amcharts.com" title="JavaScript charts" style="position: absolute; text-decoration: none; color: rgb(0, 0, 0); font-family: Verdana; font-size: 11px; opacity: 0.7; display: block; left: 35px; top: 15px;">JS chart by amCharts</a></div></div></div>
+                            </div>
+                        </div>
+                    </div>
+        <!-- main content area end -->
+        <!-- footer area start-->
+        <footer>
+            <div class="footer-area">
+                <p>© Copyright 2018. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+            </div>
+        </footer>
+        <!-- footer area end-->
+    </div>
+    <!-- page container area end -->
+    <!-- offset area start -->
+    <div class="offset-area">
+        <div class="offset-close"><i class="ti-close"></i></div>
+        <ul class="nav offset-menu-tab">
+            <li><a class="active" data-toggle="tab" href="#activity">Activity</a></li>
+            <li><a data-toggle="tab" href="#settings">Settings</a></li>
+        </ul>
+        <div class="offset-content tab-content">
+            <div id="activity" class="tab-pane fade in show active">
+                <div class="recent-activity">
+                    <div class="timeline-task">
+                        <div class="icon bg1">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Rashed sent you an email</h4>
+                            <span class="time"><i class="ti-time"></i>09:35</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                        </p>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg2">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Added</h4>
+                            <span class="time"><i class="ti-time"></i>7 Minutes Ago</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur.
+                        </p>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg2">
+                            <i class="fa fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>You missed you Password!</h4>
+                            <span class="time"><i class="ti-time"></i>09:20 Am</span>
+                        </div>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg3">
+                            <i class="fa fa-bomb"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Member waiting for you Attention</h4>
+                            <span class="time"><i class="ti-time"></i>09:35</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="settings" class="tab-pane fade">
+                <div class="offset-settings">
+                    <h4>General Settings</h4>
+                    <div class="settings-list">
+                        <div class="s-settings">
+                            <div class="s-sw-title">
+                                <h5>Notifications</h5>
+                                <div class="s-swtich">
+                                    <input type="checkbox" id="switch1" />
+                                    <label for="switch1">Toggle</label>
+                                </div>
+                            </div>
+                            <p>Keep it 'On' When you want to get all the notification.</p>
+                        </div>
+                        <div class="s-settings">
+                            <div class="s-sw-title">
+                                <h5>Show recent activity</h5>
+                                <div class="s-swtich">
+                                    <input type="checkbox" id="switch2" />
+                                    <label for="switch2">Toggle</label>
+                                </div>
+                            </div>
+                            <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- offset area end -->
+    <!-- jquery latest version -->
+    <script src="../templates/assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <!-- bootstrap 4 js -->
+    <script src="../templates/assets/js/popper.min.js"></script>
+    <script src="../templates/assets/js/bootstrap.min.js"></script>
+    <script src="../templates/assets/js/metisMenu.min.js"></script>
+    <script src="../templates/assets/js/jquery.slimscroll.min.js"></script>
+    <script src="../templates/assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- start chart js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <!-- start highcharts js -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!-- start zingchart js -->
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script>
+        zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+        ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
+    </script>
+    <!-- all line chart activation -->
+    <script src="../templates/assets/js/line-chart.js"></script>
+    <!-- all pie chart -->
+    <script src="../templates/assets/js/pie-chart.js"></script>
+    <!-- others plugins -->
+    <script src="../templates/assets/js/plugins.js"></script>
+    <script src="../templates/assets/js/scripts.js"></script>
+</body>
+
+</html>
